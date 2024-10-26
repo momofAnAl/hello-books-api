@@ -6,23 +6,13 @@ class Book(db.Model):
     title: Mapped[str]
     description: Mapped[str]
 
+def to_dict(self):
+    return dict(
+        id=self.id,
+        title=self.title,
+        description=self.description    
+    )
 
-
-
-
-
-# class Book:
-#     def __init__(self, id, title, description):
-#         self.id = id
-#         self.title = title
-#         self.description = description
-        
-#     def to_dict(self):
-#         return dict(
-#             id=self.id,
-#             title=self.title,
-#             description=self.description    
-#         )
         
 # books = [
 #     Book(1, "The Gifts of Imperfection", "Encourages readers to be kinder to themselves, and to accept imperfections"),
